@@ -1,6 +1,12 @@
 const express = require("express");
-const app = express();
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const axios = require("axios");
 
+require("dotenv").config();
+
+const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
+const app = express();
 app.get("/", (req, res) => {
   res.send("API is running!");
 });
