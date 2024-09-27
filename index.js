@@ -6,7 +6,7 @@ const axios = require("axios");
 // require("dotenv").config();
 
 // const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
-// const app = express();
+const app = express();
 
 // const api = new WooCommerceRestApi({
 //   url: process.env.WORDPRESS_SITE_URL,
