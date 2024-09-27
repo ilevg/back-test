@@ -37,6 +37,18 @@ app.get("/", (req, res) => {
   res.send("API is running!");
 });
 
+app.get("/products", async (req, res) => {
+  try {
+    const { data } = await api.get("products", { per_page: 50 });
+    res.json(data);
+  } catch (error) {
+    res
+      .status(error.response.status)
+      .json({ error: error.response.statusText });
+    console.error("Error fetching products:", error.message);
+  }
+});
+
 app.listen(process.env.PORT || 4000, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
