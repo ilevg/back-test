@@ -5,13 +5,13 @@ const axios = require("axios");
 
 require("dotenv").config();
 
-const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
-const api = new WooCommerceRestApi({
-  url: process.env.WORDPRESS_SITE_URL,
-  consumerKey: process.env.WC_CONSUMER_KEY,
-  consumerSecret: process.env.WC_CONSUMER_SECRET,
-  version: "wc/v3",
-});
+// const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
+// const api = new WooCommerceRestApi({
+//   url: process.env.WORDPRESS_SITE_URL,
+//   consumerKey: process.env.WC_CONSUMER_KEY,
+//   consumerSecret: process.env.WC_CONSUMER_SECRET,
+//   version: "wc/v3",
+// });
 app.get("/", (req, res) => {
   res.send("API is running!");
 });
